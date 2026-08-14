@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #050505;
+    color: #e4e4e7;
+    overflow-x: hidden;
+  }
+
+  /* Custom Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0c;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 9999px;
+    transition: background 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  }
+}
+
+@layer components {
+  /* Minimalist Glass Card */
+  .glass-card {
+    background: rgba(18, 18, 20, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 40px -10px rgba(56, 189, 248, 0.15), 0 0 0 1px rgba(56, 189, 248, 0.2);
+  }
+
+  /* Frosted Glass Navbar */
+  .glass-nav {
+    background: rgba(10, 10, 12, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Ice Glow Accent Button */
+  .btn-ice-primary {
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 0 20px -3px rgba(56, 189, 248, 0.4);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-ice-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.65);
+  }
+
+  .btn-ice-primary:active {
+    transform: translateY(0px);
+  }
+
+  /* Glass Outline Button */
+  .btn-ice-outline {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f4f4f5;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-ice-outline:hover {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+    transform: translateY(-2px);
+  }
+
+  /* Glass Badges */
+  .glass-badge {
+    background: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
+  }
+
+  .glass-badge:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Zero-Gravity Floating Keyframes */
+  .zero-g-float {
+    animation: zeroGravity 6s ease-in-out infinite;
+  }
+
+  .zero-g-float-alt {
+    animation: zeroGravityAlt 7.5s ease-in-out infinite;
+  }
+}
+
+@keyframes zeroGravity {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes zeroGravityAlt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  40% {
+    transform: translateY(-14px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(1deg);
+  }
+}
+
+/* Perspective 3D utility */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
