@@ -1,4 +1,4 @@
-# 🌌 Ansh Prajapati — 3D Anti-Gravity Portfolio Website
+# 🌌 Ansh Prajapati — Portfolio Website
 
 A futuristic, high-performance, 3D interactive portfolio website built for **Ansh Prajapati** (Computer Science & Engineering Student @ ABES Engineering College, aspiring AI & Software Developer).
 
