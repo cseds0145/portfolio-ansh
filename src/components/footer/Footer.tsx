@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Sparkles, Heart } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 export const Footer: React.FC = () => {

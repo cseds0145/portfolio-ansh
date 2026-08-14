@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ExternalLink, Github, Sparkles, CheckCircle2, Layers, Cpu } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2, Layers } from 'lucide-react';
 import { Project } from '../../types';
 
 interface ProjectModalProps {

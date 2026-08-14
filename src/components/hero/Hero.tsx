@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Code, Cpu, Layers, Terminal, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { PERSONAL_INFO, HERO_FLOATING_TAGS } from '../../data/portfolioData';
 import { HeroCore3D } from '../3d/HeroCore3D';
 import { ZeroGBadge } from '../ui/ZeroGBadge';

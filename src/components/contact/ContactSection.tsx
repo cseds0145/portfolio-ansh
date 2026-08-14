@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Mail, Phone, Send, Check, Copy, Sparkles, MessageSquare, Linkedin, Github, Terminal } from 'lucide-react';
-import { CONTACT_DATA, PERSONAL_INFO } from '../../data/portfolioData';
+import { CONTACT_DATA } from '../../data/portfolioData';
 import { ParallaxCard } from '../ui/ParallaxCard';
 
 export const ContactSection: React.FC = () => {

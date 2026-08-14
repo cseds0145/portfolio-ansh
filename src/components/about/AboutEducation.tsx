@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Sparkles, BrainCircuit, BookOpen, MapPin, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { Sparkles, BrainCircuit, MapPin, CheckCircle2 } from 'lucide-react';
 import { EDUCATION_DATA, PERSONAL_INFO } from '../../data/portfolioData';
 import { ParallaxCard } from '../ui/ParallaxCard';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Sparkles, Clock, ArrowUpRight, CheckCircle, Code, Layers } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, Clock, ArrowUpRight } from 'lucide-react';
 import { PROJECTS_DATA } from '../../data/portfolioData';
 import { Project } from '../../types';
 import { ParallaxCard } from '../ui/ParallaxCard';

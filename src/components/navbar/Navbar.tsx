@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileDown, Sparkles, ExternalLink } from 'lucide-react';
-import { PERSONAL_INFO } from '../../data/portfolioData';
+import { Menu, X, FileDown } from 'lucide-react';
 
 interface NavbarProps {
   onOpenResume: () => void;

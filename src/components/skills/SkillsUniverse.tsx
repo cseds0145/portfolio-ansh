@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code2, Layout, Cpu, Terminal, Sparkles, Filter } from 'lucide-react';
+import { Code2, Layout, Cpu, Terminal, Sparkles } from 'lucide-react';
 import { SKILL_CATEGORIES } from '../../data/portfolioData';
 import { ParallaxCard } from '../ui/ParallaxCard';
 import { ZeroGBadge } from '../ui/ZeroGBadge';
