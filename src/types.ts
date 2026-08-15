@@ -35,16 +35,35 @@ export interface EducationItem {
   current: boolean;
 }
 
-export interface Achievement {
+export interface CertificateItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  issuer: string;
+  issueDate: string;
+  credentialId?: string;
+  category: 'AI & Data Science' | 'Core CS & Java' | 'Languages' | 'Competitive Programming';
+  skillsCovered: string[];
+  curriculum?: string;
+  signatory: string;
+  verifyUrl?: string;
+  badgeType: string;
+  theme: 'scaler' | 'linkedin' | 'hackerrank' | 'codomax' | 'codechef';
+  accentColor: string;
+}
+
+export interface AchievementItem {
   id: string;
   title: string;
   issuer: string;
-  date?: string;
-  badgeType: string;
+  badgeTier: string;
+  metricNumber: string;
+  metricLabel: string;
   description: string;
-  metrics: string;
+  category: string;
+  skills: string[];
   verifyUrl?: string;
-  icon: string;
+  accentColor: string;
 }
 
 export interface ContactInfo {

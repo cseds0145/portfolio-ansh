@@ -14,6 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Certificates', href: '#certificates' },
     { label: 'Achievements', href: '#achievements' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -22,8 +23,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      // Simple active section detector
-      const sections = ['about', 'skills', 'projects', 'achievements', 'contact'];
+      // Section scroll spy
+      const sections = ['about', 'skills', 'projects', 'certificates', 'achievements', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -77,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
                   isActive
                     ? 'text-white bg-sky-500/15 border border-sky-500/30 shadow-ice-sm'
                     : 'text-zinc-400 hover:text-zinc-100 hover:bg-white/5'

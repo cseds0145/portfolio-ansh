@@ -1,6 +1,6 @@
 import React from 'react';
-import { X, Download, FileText, CheckCircle2, Award, Briefcase, GraduationCap, MapPin, Mail, Phone } from 'lucide-react';
-import { PERSONAL_INFO, CONTACT_DATA, SKILL_CATEGORIES, EDUCATION_DATA, ACHIEVEMENTS_DATA } from '../../data/portfolioData';
+import { X, Download, FileText, CheckCircle2, Award, Briefcase, GraduationCap, MapPin, Mail, Phone, ShieldCheck } from 'lucide-react';
+import { PERSONAL_INFO, CONTACT_DATA, SKILL_CATEGORIES, EDUCATION_DATA, ACHIEVEMENTS_DATA, CERTIFICATES_DATA } from '../../data/portfolioData';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -78,6 +78,46 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </div>
           </div>
 
+          {/* Certifications & Industry Credentials */}
+          <div>
+            <h4 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+              <ShieldCheck className="w-4 h-4" /> Certifications & Credentials
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {CERTIFICATES_DATA.map((cert) => (
+                <div key={cert.id} className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white text-xs">{cert.title}</p>
+                    <p className="text-[11px] text-zinc-400 font-mono mt-0.5">{cert.issuer} • {cert.issueDate}</p>
+                    {cert.credentialId && (
+                      <p className="text-[10px] text-sky-300 font-mono">ID: {cert.credentialId}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Key Achievements */}
+          <div>
+            <h4 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
+              <Award className="w-4 h-4" /> Key Achievements & Competitive Coding
+            </h4>
+            <div className="space-y-2.5">
+              {ACHIEVEMENTS_DATA.map((ach) => (
+                <div key={ach.id} className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 flex items-start gap-3">
+                  <Award className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-white text-xs">{ach.title}</span>
+                    <span className="text-xs text-zinc-400 block mt-0.5">{ach.description}</span>
+                    <span className="text-[11px] font-mono text-sky-300 block mt-1">{ach.metricLabel}: {ach.metricNumber}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Core Technical Competencies */}
           <div>
             <h4 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
@@ -98,30 +138,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               ))}
             </div>
           </div>
-
-          {/* Achievements */}
-          <div>
-            <h4 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-3">
-              <Award className="w-4 h-4" /> Key Achievements & Certifications
-            </h4>
-            <div className="space-y-2.5">
-              {ACHIEVEMENTS_DATA.map((ach) => (
-                <div key={ach.id} className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-semibold text-white text-xs">{ach.title}</span>
-                    <span className="text-xs text-zinc-400 block mt-0.5">{ach.description}</span>
-                    <span className="text-[11px] font-mono text-sky-300 block mt-1">{ach.metrics}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Footer info */}
         <div className="mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-500 font-mono">
-          <span>Ansh Prajapati Portfolio • Verified Document</span>
+          <span>Ansh Prajapati Portfolio • Verified Credentials</span>
           <button
             onClick={onClose}
             className="text-sky-400 hover:underline"

@@ -1,4 +1,4 @@
-import { SkillCategory, Project, EducationItem, Achievement, ContactInfo } from '../types';
+import { SkillCategory, Project, EducationItem, CertificateItem, AchievementItem, ContactInfo } from '../types';
 
 export const PERSONAL_INFO = {
   name: "Ansh Prajapati",
@@ -23,8 +23,9 @@ export const HERO_FLOATING_TAGS = [
   { label: "Java", icon: "☕", delay: 0 },
   { label: "DSA", icon: "⚡", delay: 0.2 },
   { label: "GenAI", icon: "✨", delay: 0.4 },
-  { label: "Tailwind CSS", icon: "🎨", delay: 0.6 },
-  { label: "Problem Solving", icon: "🧩", delay: 0.8 },
+  { label: "Python", icon: "🐍", delay: 0.6 },
+  { label: "Tailwind CSS", icon: "🎨", delay: 0.8 },
+  { label: "Problem Solving", icon: "🧩", delay: 1.0 },
 ];
 
 export const EDUCATION_DATA: EducationItem[] = [
@@ -63,11 +64,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Code2",
     skills: [
       { name: "Java", tag: "Primary", isPrimary: true },
+      { name: "Python", tag: "Certified", isPrimary: true },
       { name: "C", tag: "Foundational", isPrimary: true },
       { name: "JavaScript", tag: "ES6+", isPrimary: true },
       { name: "HTML5", tag: "Semantic" },
-      { name: "CSS3", tag: "Modern" },
-      { name: "Python", tag: "Learning", isPrimary: false }
+      { name: "CSS3", tag: "Modern" }
     ]
   },
   {
@@ -76,9 +77,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Layout",
     skills: [
       { name: "Tailwind CSS", tag: "Utility First", isPrimary: true },
-      { name: "Bootstrap", tag: "Component UI" },
       { name: "React", tag: "Components & State", isPrimary: true },
-      { name: "Responsive UI", tag: "Mobile-First" }
+      { name: "Bootstrap", tag: "Component UI" },
+      { name: "Three.js", tag: "3D & WebGL", isPrimary: true }
     ]
   },
   {
@@ -86,9 +87,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     description: "Algorithmic thinking, optimization, and software architecture principles.",
     icon: "Cpu",
     skills: [
-      { name: "Data Structures & Algorithms", tag: "Daily Practice", isPrimary: true },
-      { name: "Object-Oriented Programming (OOP)", tag: "Design Principles", isPrimary: true },
-      { name: "Problem Solving", tag: "Competitive Logic", isPrimary: true },
+      { name: "Data Structures & Algorithms", tag: "250+ Solved", isPrimary: true },
+      { name: "Object-Oriented Programming (OOP)", tag: "Certified Scaler", isPrimary: true },
+      { name: "Problem Solving (Basic)", tag: "Certified HackerRank", isPrimary: true },
       { name: "Algorithm Analysis (Big-O)", tag: "Optimization" }
     ]
   },
@@ -104,19 +105,57 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ]
   },
   {
-    title: "Emerging Technologies",
-    description: "Pushing into machine intelligence, generative models, and automation.",
+    title: "Emerging Tech & Data Science",
+    description: "Machine learning, generative AI tools, and industrial data science practice.",
     icon: "Sparkles",
     skills: [
-      { name: "Generative AI", tag: "Prompt & LLM Arch", isPrimary: true },
-      { name: "Machine Learning", tag: "Fundamentals", isPrimary: true },
-      { name: "AI Automation", tag: "Workflows" },
-      { name: "Autonomous Agents", tag: "Exploration" }
+      { name: "Generative AI Tools", tag: "Certified LinkedIn", isPrimary: true },
+      { name: "Data Science", tag: "Internship Codomax", isPrimary: true },
+      { name: "Machine Learning", tag: "Foundations", isPrimary: true },
+      { name: "Agentic Workflows", tag: "Research" }
     ]
   }
 ];
 
 export const PROJECTS_DATA: Project[] = [
+  {
+    id: "hinglish-translator",
+    title: "Hinglish Translator Web App",
+    subtitle: "Conversational Hindi-English Bilingual Translation Engine",
+    description: "An intelligent bilingual translation platform designed to translate seamlessly between standard English, Hindi script, and conversational Romanized Hinglish with real-time UI synchronization.",
+    longDescription: "Engineered to bridge the language gap for Indian digital internet users. Features instant language swapping, clean text transformation algorithms, responsive typography, and single-click copy functionality.",
+    tags: ["JavaScript", "HTML5", "CSS3", "NLP & Translation", "Bilingual UI"],
+    features: [
+      "Real-time bidirectional translation between English, Hindi, and Romanized Hinglish.",
+      "Instant clipboard copy and responsive text expansion area.",
+      "Clean modern glassmorphic interface with low latency input processing.",
+      "Mobile-first adaptive layout for fluid mobile keyboard typing."
+    ],
+    status: "Completed",
+    demoUrl: "https://hinglishtranslater.netlify.app/",
+    githubUrl: "https://github.com/cseds0145/HinglishTranslator",
+    metrics: "Live on Netlify • Zero Latency • Responsive Web App",
+    accentColor: "#38BDF8"
+  },
+  {
+    id: "vintage-library",
+    title: "Vintage Library Management",
+    subtitle: "Interactive Book Cataloging & Inventory Tracking Platform",
+    description: "A comprehensive, beautifully styled vintage-themed library management web system featuring live book search, category filtering, inventory status tracking, and book issue/return management.",
+    longDescription: "Built with a rich aesthetic and modular architecture to manage collections of books, reader records, and borrowing histories. Includes dynamic DOM state updates, interactive book card views, and clean navigation.",
+    tags: ["JavaScript", "HTML5", "CSS3", "Inventory System", "Responsive UI"],
+    features: [
+      "Comprehensive book cataloging with real-time title and author search.",
+      "Dynamic issue/return workflow with status indicators.",
+      "Aesthetic vintage-inspired UI styling with responsive layouts.",
+      "Zero-dependency performant vanilla web engineering."
+    ],
+    status: "Completed",
+    demoUrl: "https://vintagee-library.netlify.app/",
+    githubUrl: "https://github.com/cseds0145/LibraryManagement",
+    metrics: "Live on Netlify • Catalog Management • Full UI Workflow",
+    accentColor: "#EAB308"
+  },
   {
     id: "amazon-clone",
     title: "Amazon Clone Website",
@@ -172,25 +211,125 @@ export const PROJECTS_DATA: Project[] = [
   }
 ];
 
-export const ACHIEVEMENTS_DATA: Achievement[] = [
+export const CERTIFICATES_DATA: CertificateItem[] = [
   {
-    id: "codechef-bronze",
-    title: "CodeChef Problem Solver — Bronze Badge",
-    issuer: "CodeChef Competitive Programming Platform",
-    badgeType: "Bronze Badge",
-    description: "Recognized for consistent algorithmic problem-solving excellence, successfully solving over 50+ curated algorithm problems across 500 difficulty rating practice tracks.",
-    metrics: "50+ Solved • 500 Rating Practice Series • Data Structures & Logic",
-    verifyUrl: "https://www.codechef.com/users/anshprajapati",
-    icon: "Award"
+    id: "scaler-python",
+    title: "Python Course for Beginners: Mastering the Essentials",
+    subtitle: "Comprehensive Python Programming & Computational Problem Solving",
+    issuer: "Scaler Topics",
+    issueDate: "11 August 2026",
+    category: "Languages",
+    skillsCovered: ["Python Core", "Data Structures", "Control Flow", "Functions & Modules", "Algorithms"],
+    curriculum: "121 Video Tutorials • 16 Modules • 10 Challenges",
+    signatory: "Anshuman Singh (Co-founder SCALER)",
+    verifyUrl: "https://www.scaler.com/topics/",
+    badgeType: "Certificate of Excellence",
+    theme: "scaler",
+    accentColor: "#38BDF8"
   },
   {
-    id: "scaler-oop-java",
-    title: "Object-Oriented Programming in Java",
-    issuer: "Scaler Topics Certification",
-    badgeType: "Professional Certificate",
-    description: "Comprehensive certification covering Encapsulation, Polymorphism, Inheritance, Abstraction, SOLID principles, and clean class design in Java.",
-    metrics: "Verified Credential • Scaler Topics • Core Java & Design Patterns",
+    id: "linkedin-genai",
+    title: "What Is Generative AI?",
+    subtitle: "Frontier Artificial Intelligence & Generative Model Foundations",
+    issuer: "LinkedIn Learning",
+    issueDate: "11 August 2026",
+    credentialId: "0dffcfc3dacbdc0d189ea35eec847f7654fe2c0b79d4536dac2535fdbf383ce6",
+    category: "AI & Data Science",
+    skillsCovered: ["Generative AI Tools", "Artificial Intelligence (AI)", "LLM Architectures", "Prompt Engineering"],
+    curriculum: "Course Completion • 1 hour 3 minutes (07:24 AM UTC)",
+    signatory: "Shea Hanson (Head of Learning Content Strategy)",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/0dffcfc3dacbdc0d189ea35eec847f7654fe2c0b79d4536dac2535fdbf383ce6",
+    badgeType: "Verified Professional Credential",
+    theme: "linkedin",
+    accentColor: "#0A66C2"
+  },
+  {
+    id: "scaler-java-oop",
+    title: "Object Oriented Programming in Java Course",
+    subtitle: "Enterprise Class Hierarchies, Abstraction, Polymorphism & Design Principles",
+    issuer: "Scaler Topics",
+    issueDate: "17 May 2026",
+    category: "Core CS & Java",
+    skillsCovered: ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction", "Interface Design", "Java Memory"],
+    curriculum: "16 Video Tutorials • 4 Modules • 4 Challenges",
+    signatory: "Anshuman Singh (Co-founder SCALER)",
     verifyUrl: "https://www.scaler.com/topics/",
-    icon: "ShieldCheck"
+    badgeType: "Certificate of Excellence",
+    theme: "scaler",
+    accentColor: "#38BDF8"
+  },
+  {
+    id: "hackerrank-problem-solving",
+    title: "Problem Solving (Basic)",
+    subtitle: "HackerRank Standardized Algorithmic Competency Certification",
+    issuer: "HackerRank",
+    issueDate: "19 March 2026",
+    credentialId: "9BAE4D89CFD9",
+    category: "Competitive Programming",
+    skillsCovered: ["Algorithmic Logic", "Data Structures", "Time Complexity", "Array Manipulation", "String Parsing"],
+    curriculum: "Passed HackerRank Skill Certification Assessment",
+    signatory: "Harishankaran K (CTO, HackerRank)",
+    verifyUrl: "https://www.hackerrank.com/certificates/9BAE4D89CFD9",
+    badgeType: "Certificate of Accomplishment",
+    theme: "hackerrank",
+    accentColor: "#00EA64"
+  },
+  {
+    id: "codomax-data-science",
+    title: "Data Science Internship",
+    subtitle: "Industrial Practical Experience & Applied Analytics",
+    issuer: "Codomax Digital Solutions (MSME Certified)",
+    issueDate: "09 August 2026",
+    credentialId: "CDM/CERT/475013",
+    category: "AI & Data Science",
+    skillsCovered: ["Data Science Pipelines", "Statistical Modeling", "Applied Analytics", "Data Preprocessing", "Machine Learning"],
+    curriculum: "Industrial Internship & Project Completion with Technical Distinction",
+    signatory: "Nishanthi (Program Coordinator)",
+    verifyUrl: "https://codomax.com/verify",
+    badgeType: "Certificate of Completion",
+    theme: "codomax",
+    accentColor: "#E11D48"
+  }
+];
+
+export const ACHIEVEMENTS_DATA: AchievementItem[] = [
+  {
+    id: "codechef-silver-250",
+    title: "CodeChef Problem Solver — Silver Badge",
+    issuer: "CodeChef Competitive Programming Platform",
+    badgeTier: "Silver Badge",
+    metricNumber: "250+",
+    metricLabel: "Algorithmic Problems Solved",
+    description: "Awarded for outstanding problem-solving consistency, solving over 250+ algorithm challenges across data structures, sorting, number theory, and search optimization on CodeChef.",
+    category: "Competitive Programming",
+    skills: ["Data Structures", "Dynamic Programming", "Two Pointers", "Sorting & Searching", "Mathematical Logic"],
+    verifyUrl: "https://www.codechef.com/users/anshprajapati",
+    accentColor: "#C0C0C0"
+  },
+  {
+    id: "hackerrank-problem-solver",
+    title: "HackerRank Certified Problem Solver",
+    issuer: "HackerRank Skill Test",
+    badgeTier: "Skill Certified",
+    metricNumber: "100%",
+    metricLabel: "Assessment Score (Certificate ID: 9BAE4D89CFD9)",
+    description: "Successfully validated foundational computational problem-solving and algorithmic logic through HackerRank's industry-standard certification examination.",
+    category: "Algorithms & Logic",
+    skills: ["Logic Formulation", "Edge Case Handling", "Time Complexity Optimization", "Arrays & Hashes"],
+    verifyUrl: "https://www.hackerrank.com/certificates/9BAE4D89CFD9",
+    accentColor: "#00EA64"
+  },
+  {
+    id: "scaler-dual-excellence",
+    title: "Dual Scaler Excellence Awards",
+    issuer: "Scaler Topics Academic Tracks",
+    badgeTier: "Excellence Honors",
+    metricNumber: "137+",
+    metricLabel: "Video Modules & Engineering Challenges Completed",
+    description: "Earned dual Certificates of Excellence in Python and Object-Oriented Java with 14 comprehensive challenges solved.",
+    category: "Software Engineering",
+    skills: ["Java OOP Architecture", "Python Core Mastery", "Modular Code Design"],
+    verifyUrl: "https://www.scaler.com/topics/",
+    accentColor: "#38BDF8"
   }
 ];
